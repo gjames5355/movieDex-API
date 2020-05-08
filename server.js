@@ -34,13 +34,13 @@ function handleGetMovie(req, res) {
 
   if (country) {
     response = response.filter((movie) =>
-      movie.country.toLowerCase().includes(movie.toLowerCase())
+      movie.country.toLowerCase().includes(movie.country.toLowerCase())
     );
   }
 
   if (avg_vote) {
     response = response.filter(
-      (movie) => Number(movie.avg_vote) >= Number(movie.avg_vote)
+      (movie) => Number(movie.avg_vote) >= Number(avg_vote)
     );
   }
 
